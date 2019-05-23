@@ -1,0 +1,9 @@
+syntax = "proto2";
+
+package messages;
+
+message Status {
+  required int32 count = 1;
+  required float position_measured = 2;
+  required float current_measured = 3;
+}

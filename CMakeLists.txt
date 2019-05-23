@@ -5,7 +5,7 @@ include(GNUInstallDirs)
 SET(CPACK_GENERATOR "DEB")
 set(CPACK_PACKAGE_CONTACT "Lee Magnusson")
 set(CPACK_DEBIAN_PACKAGE_DEPENDS libudev1)
-set(CPACK_DEBIAN_PACKAGE_CONTROL_EXTRA 
+set(CPACK_DEBIAN_PACKAGE_CONTROL_EXTRA
     ${CMAKE_SOURCE_DIR}/postinst)
 INCLUDE(CPack)
 
@@ -13,8 +13,8 @@ set (CMAKE_CXX_STANDARD 11)
 
 add_subdirectory(src)
 
-add_subdirectory(example)
-install(DIRECTORY example 
+add_subdirectory(server)
+install(DIRECTORY server
     DESTINATION ${CMAKE_INSTALL_DATADIR}/${CMAKE_PROJECT_NAME})
 
 install(FILES share/99-realtime-tmp.rules
